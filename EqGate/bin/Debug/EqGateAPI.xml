@@ -1,0 +1,1061 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<!--  
+  Developer: Husnutdionov Nazir K. aka Wild Pointer © 2008
+  Created: 29.10.2008 Version 0.1 (xml structure version)
+    1. Add API = YYBXDER 
+  Modify: 30.10.2008 Version 0.2
+    1. Add API = YH18EER
+    2. Add API = YH68EER
+  Modify: 31.10.2008 Version 0.2
+    1. Add API = YG01EER
+  Modify: 01.11.2008 Version 0.2
+    1. Add API = YS01DER
+  Modify: 19.12.2008 Version 0.3
+    1. Add API = YS02DER
+    2. Add API = YH69EER
+  Modify: 23.12.2008 Version 0.4
+    1. Add API = YS02DER
+-->
+<EQGate Version="0.4" LastModify="23.12.2008" ClientVersion="BTCEQWIN32002007092001" ServerVersion="EQGATE    002007100801">
+  <api name="YYBXDER" type="list" description="Проводки по счету"> 
+    <input>
+      <field name="HZBPD">
+        <type>D</type>
+        <size>8</size>
+        <obligatory>1</obligatory>
+        <description>Дата учета</description>
+      </field>
+      <field name="HZEAN">
+        <type>A</type>
+        <size>20</size>
+        <obligatory>1</obligatory>
+        <description>Номер счета</description>
+      </field>
+      <field name="IFCID">
+        <type>A</type>
+        <size>1</size>
+        <obligatory>0</obligatory>
+        <description>Код внешней системы (1-EsterDev, 2-Диасофт)</description>
+      </field>
+      <field name="INRES">
+        <type>A</type>
+        <size>21</size>
+        <obligatory>0</obligatory>
+        <description>Зарезервировано</description>
+      </field>
+    </input>
+    <output>
+      <field name="HZPID">
+        <type>A</type>
+        <size>21</size>
+        <obligatory>0</obligatory>
+        <description>ID проводки</description>
+        <width>60</width>
+      </field>
+      <field name="HZBPD">
+        <type>D</type>
+        <size>8</size>
+        <obligatory>0</obligatory>
+        <description>Дата учета</description>
+        <width>50</width>
+      </field>
+      <field name="HZEN1">
+        <type>A</type>
+        <size>20</size>
+        <obligatory>0</obligatory>
+        <description>Счет дебета</description>
+        <width>70</width>
+      </field>
+      <field name="HZEN2">
+        <type>A</type>
+        <size>20</size>
+        <obligatory>0</obligatory>
+        <description>Счет кредита</description>
+        <width>70</width>
+      </field>
+      <field name="HZAMD">
+        <type>U</type>
+        <size>15,0</size>
+        <obligatory>0</obligatory>
+        <description>Сумма дебета в валюте</description>
+        <width>60</width>
+      </field>
+      <field name="HZCYD">
+        <type>A</type>
+        <size>3</size>
+        <obligatory>0</obligatory>
+        <description>Валюта дебета</description>
+        <width>60</width>
+      </field>
+      <field name="HZARD">
+        <type>U</type>
+        <size>15,0</size>
+        <obligatory>0</obligatory>
+        <description>Сумма дебета в рублёвом эквиваленте</description>
+        <width>50</width>
+      </field>
+      <field name="HZAMC">
+        <type>U</type>
+        <size>15,0</size>
+        <obligatory>0</obligatory>
+        <description>Сумма кредита в валюте</description>
+        <width>50</width>
+      </field>
+      <field name="HZCYC">
+        <type>A</type>
+        <size>3</size>
+        <obligatory>0</obligatory>
+        <description>Валюта кредита</description>
+        <width>60</width>
+      </field>
+      <field name="HZARC">
+        <type>U</type>
+        <size>15,0</size>
+        <obligatory>0</obligatory>
+        <description>Сумма кредита в рублёвом эквиваленте</description>
+        <width>70</width>
+      </field>
+      <field name="HZNR">
+        <type>A</type>
+        <size>140</size>
+        <obligatory>0</obligatory>
+        <description>Описание</description>
+        <width>50</width>
+      </field>
+      <field name="OUTRES">
+        <type>A</type>
+        <size>225</size>
+        <obligatory>0</obligatory>
+        <description>Зарезервировано</description>
+        <width>50</width>
+      </field>
+    </output>
+  </api>
+  <api name="YH18EER" type="query" description="Запрос информации о проводке">
+    <input>
+      <field name="GZPID">
+        <type>A</type>
+        <size>21</size>
+        <obligatory>1</obligatory>
+        <description>ID проводки</description>
+      </field>
+      <field name="IFCID">
+        <type>A</type>
+        <size>1</size>
+        <obligatory>0</obligatory>
+        <description>Код внешней системы (1-EsterDev, 2-Диасофт)</description>
+      </field>
+      <field name="INRES">
+        <type>A</type>
+        <size>28</size>
+        <obligatory>0</obligatory>
+        <description>Зарезервировано</description>
+      </field>
+    </input>
+    <output>
+      <field name="YR6EN1">
+        <type>A</type>
+        <size>20</size>
+        <obligatory>0</obligatory>
+        <description>Лицевой счет дебета</description>
+        <width>60</width>
+      </field>
+      <field name="YR6EN2">
+        <type>A</type>
+        <size>20</size>
+        <obligatory>0</obligatory>
+        <description>Лицевой счет кредита</description>
+        <width>50</width>
+      </field>
+      <field name="YR6AMA">
+        <type>U</type>
+        <size>15,0</size>
+        <obligatory>0</obligatory>
+        <description>Сумма по дебету в валюте</description>
+        <width>70</width>
+      </field>
+      <field name="YR6BAM">
+        <type>U</type>
+        <size>15,0</size>
+        <obligatory>0</obligatory>
+        <description>Сумма по дебету в рублях</description>
+        <width>70</width>
+      </field>
+      <field name="YR6VFR">
+        <type>D</type>
+        <size>8</size>
+        <obligatory>0</obligatory>
+        <description>Дата валютирования</description>
+        <width>80</width>
+      </field>
+      <field name="YR6POD">
+        <type>D</type>
+        <size>8</size>
+        <obligatory>0</obligatory>
+        <description>Дата ввода</description>
+        <width>80</width>
+      </field>
+      <field name="YR6DRF">
+        <type>A</type>
+        <size>16</size>
+        <obligatory>0</obligatory>
+        <description>Пользовательское описание</description>
+        <width>80</width>
+      </field>
+      <field name="GZAMAC">
+        <type>U</type>
+        <size>15,0</size>
+        <obligatory>0</obligatory>
+        <description>Сумма по кредиту</description>
+        <width>80</width>
+      </field>
+      <field name="GZNPK">
+        <type>A</type>
+        <size>10</size>
+        <obligatory>0</obligatory>
+        <description>Номер пачки</description>
+        <width>80</width>
+      </field>
+      <field name="GZUID">
+        <type>A</type>
+        <size>30</size>
+        <obligatory>0</obligatory>
+        <description>Исполнитель</description>
+        <width>80</width>
+      </field>
+      <field name="GZKSD">
+        <type>A</type>
+        <size>2</size>
+        <obligatory>0</obligatory>
+        <description>Символ касплана по дебету</description>
+        <width>80</width>
+      </field>
+      <field name="GZKSC">
+        <type>A</type>
+        <size>2</size>
+        <obligatory>0</obligatory>
+        <description>Символ касплана по кредиту</description>
+        <width>80</width>
+      </field>
+      <field name="SGNR1">
+        <type>A</type>
+        <size>35</size>
+        <obligatory>0</obligatory>
+        <description>Описание/назначение (Строка 1)</description>
+        <width>80</width>
+      </field>
+      <field name="SGNR2">
+        <type>A</type>
+        <size>35</size>
+        <obligatory>0</obligatory>
+        <description>Описание/назначение (Строка 2)</description>
+        <width>80</width>
+      </field>
+      <field name="SGNR3">
+        <type>A</type>
+        <size>35</size>
+        <obligatory>0</obligatory>
+        <description>Описание/назначение (Строка 3)</description>
+        <width>80</width>
+      </field>
+      <field name="SGNR4">
+        <type>A</type>
+        <size>35</size>
+        <obligatory>0</obligatory>
+        <description>Описание/назначение (Строка 4)</description>
+        <width>80</width>
+      </field>
+      <field name="OUTRES">
+        <type>A</type>
+        <size>199</size>
+        <obligatory>0</obligatory>
+        <description>Зарезервировано</description>
+        <width>80</width>
+      </field>
+    </output>
+  </api>
+  <api name="YH68EER" type="query" description="Запрос текущего остатка по счету">
+    <input>
+      <field name="HZEAN">
+        <type>A</type>
+        <size>20</size>
+        <obligatory>1</obligatory>
+        <description>Номер лицевого счета</description>
+      </field>
+      <field name="IFCID">
+        <type>A</type>
+        <size>1</size>
+        <obligatory>0</obligatory>
+        <description>Код внешней системы (1-EsterDev, 2-Диасофт)</description>
+      </field>
+      <field name="INRES">
+        <type>A</type>
+        <size>29</size>
+        <obligatory>0</obligatory>
+        <description>Зарезервировано</description>
+      </field>
+    </input>
+    <output>
+      <field name="HZCABL">
+        <type>S</type>
+        <size>16,0</size>
+        <obligatory>0</obligatory>
+        <description>Текущий доступный остаток</description>
+        <width>60</width>
+      </field>
+      <field name="HZODL">
+        <type>S</type>
+        <size>16,0</size>
+        <obligatory>0</obligatory>
+        <description>Лимит овердрафта</description>
+        <width>50</width>
+      </field>
+      <field name="HZRBA">
+        <type>S</type>
+        <size>16,0</size>
+        <obligatory>0</obligatory>
+        <description>Зарезервированный остаток</description>
+        <width>50</width>
+      </field>
+      <field name="HZLDBL">
+        <type>S</type>
+        <size>16,0</size>
+        <obligatory>0</obligatory>
+        <description>Бухгалтерский баланс</description>
+        <width>50</width>
+      </field>
+      <field name="HZSTBL">
+        <type>S</type>
+        <size>16,0</size>
+        <obligatory>0</obligatory>
+        <description>Текущий остаток</description>
+        <width>50</width>
+      </field>
+      <field name="HZPCBL">
+        <type>S</type>
+        <size>16,0</size>
+        <obligatory>0</obligatory>
+        <description>Предыдущий чистый остаток</description>
+        <width>50</width>
+      </field>
+      <field name="HZCCBL">
+        <type>S</type>
+        <size>16,0</size>
+        <obligatory>0</obligatory>
+        <description>Текущий чистый остаток</description>
+        <width>50</width>
+      </field>
+      <field name="HZLABL">
+        <type>S</type>
+        <size>16,0</size>
+        <obligatory>0</obligatory>
+        <description>Прошлый доступный остаток</description>
+        <width>50</width>
+      </field>
+      <field name="HZNABL">
+        <type>S</type>
+        <size>16,0</size>
+        <obligatory>0</obligatory>
+        <description>Следующий доступный остаток</description>
+        <width>50</width>
+      </field>
+      <field name="HZFWBL">
+        <type>S</type>
+        <size>16,0</size>
+        <obligatory>0</obligatory>
+        <description>Forward balance</description>
+        <width>50</width>
+      </field>
+      <field name="HZSM0">
+        <type>S</type>
+        <size>16,0</size>
+        <obligatory>0</obligatory>
+        <description>Сумма проводок за сегодня</description>
+        <width>50</width>
+      </field>
+      <field name="HZSML">
+        <type>S</type>
+        <size>16,0</size>
+        <obligatory>0</obligatory>
+        <description>Сумма проводок с датой следующего дня</description>
+        <width>50</width>
+      </field>
+      <field name="HZSM1">
+        <type>S</type>
+        <size>16,0</size>
+        <obligatory>0</obligatory>
+        <description>Сумма проводок с датой следующего дня</description>
+        <width>50</width>
+      </field>
+      <field name="HZSM2">
+        <type>S</type>
+        <size>16,0</size>
+        <obligatory>0</obligatory>
+        <description>Сумма проводок с датой позднее следующего дня</description>
+        <width>50</width>
+      </field>
+      <field name="HZSMD">
+        <type>S</type>
+        <size>16,0</size>
+        <obligatory>0</obligatory>
+        <description>Сумма дебетовых проводок</description>
+        <width>50</width>
+      </field>
+      <field name="HZSMC">
+        <type>S</type>
+        <size>16,0</size>
+        <obligatory>0</obligatory>
+        <description>Сумма кредитовых проводок</description>
+        <width>50</width>
+      </field>
+      <field name="HZSMA">
+        <type>S</type>
+        <size>16,0</size>
+        <obligatory>0</obligatory>
+        <description>Сумма теневых корректировок</description>
+        <width>50</width>
+      </field>
+      <field name="OUTRES">
+        <type>A</type>
+        <size>228</size>
+        <obligatory>0</obligatory>
+        <description>Зарезервировано</description>
+        <width>50</width>
+      </field>
+    </output>
+  </api>
+  <api name="YG01EER" type="query" description="Запрос информации по клиенту">
+    <input>
+      <field name="GZCUS">
+        <type>A</type>
+        <size>6</size>
+        <obligatory>1</obligatory>
+        <description>Мнемоника клиента</description>
+      </field>
+      <field name="GZCLC">
+        <type>A</type>
+        <size>3</size>
+        <obligatory>1</obligatory>
+        <description>Код месторасположения клиента</description>
+      </field>
+      <field name="IFCID">
+        <type>A</type>
+        <size>1</size>
+        <obligatory>0</obligatory>
+        <description>Код внешней системы</description>
+      </field>
+      <field name="INRES">
+        <type>A</type>
+        <size>22</size>
+        <obligatory>0</obligatory>
+        <description>Зарезервировано</description>
+      </field>
+    </input>
+    <output>
+      <field name="GZCTP">
+        <type>A</type>
+        <size>2</size>
+        <obligatory>0</obligatory>
+        <description>Тип клиента</description>
+        <width>60</width>
+      </field>
+      <field name="GZCUN">
+        <type>A</type>
+        <size>35</size>
+        <obligatory>0</obligatory>
+        <description>Полное имя</description>
+        <width>60</width>
+      </field>
+      <field name="GZDAS">
+        <type>A</type>
+        <size>15</size>
+        <obligatory>0</obligatory>
+        <description>Краткое имя для счетов</description>
+        <width>60</width>
+      </field>
+      <field name="BGFNM1">
+        <type>A</type>
+        <size>35</size>
+        <obligatory>0</obligatory>
+        <description>Фамилия/Полное наименование 1</description>
+        <width>60</width>
+      </field>
+      <field name="BGFNM2">
+        <type>A</type>
+        <size>35</size>
+        <obligatory>0</obligatory>
+        <description>Имя/Полное наименование 2</description>
+        <width>60</width>
+      </field>
+      <field name="BGFNM3">
+        <type>A</type>
+        <size>35</size>
+        <obligatory>0</obligatory>
+        <description>Отчество/Полное наименование 3</description>
+        <width>60</width>
+      </field>
+      <field name="BGFNM4">
+        <type>A</type>
+        <size>35</size>
+        <obligatory>0</obligatory>
+        <description>Полное наименование 4</description>
+        <width>60</width>
+      </field>
+      <field name="BGFNM5">
+        <type>A</type>
+        <size>20</size>
+        <obligatory>0</obligatory>
+        <description>Полное наименование 5</description>
+        <width>60</width>
+      </field>
+      <field name="GZBRNM">
+        <type>A</type>
+        <size>4</size>
+        <obligatory>0</obligatory>
+        <description>Мнемоника отделения</description>
+        <width>60</width>
+      </field>
+      <field name="GZCNAL">
+        <type>A</type>
+        <size>2</size>
+        <obligatory>0</obligatory>
+        <description>Страна резиденции</description>
+        <width>60</width>
+      </field>
+      <field name="GZCNAP">
+        <type>A</type>
+        <size>2</size>
+        <obligatory>0</obligatory>
+        <description>Страна происхождения</description>
+        <width>60</width>
+      </field>
+      <field name="GZACO">
+        <type>A</type>
+        <size>3</size>
+        <obligatory>0</obligatory>
+        <description>Менеджер клиента</description>
+        <width>60</width>
+      </field>
+      <field name="BGDACC">
+        <type>D</type>
+        <size>8</size>
+        <obligatory>0</obligatory>
+        <description>Дата закрытия клиента</description>
+        <width>60</width>
+      </field>
+      <field name="BGDACO">
+        <type>D</type>
+        <size>8</size>
+        <obligatory>0</obligatory>
+        <description>Дата открытия клиента</description>
+        <width>60</width>
+      </field>
+      <field name="KATYP">
+        <type>A</type>
+        <size>1</size>
+        <obligatory>0</obligatory>
+        <description>Категория клиента (1-банк, 2-юр. лицо, 3-физ. лицо)</description>
+        <width>60</width>
+      </field>
+      <field name="BGCLCO">
+        <type>A</type>
+        <size>1</size>
+        <obligatory>0</obligatory>
+        <description>Является клиентом (Y/N)</description>
+        <width>60</width>
+      </field>
+      <field name="BGDBW">
+        <type>D</type>
+        <size>8</size>
+        <obligatory>0</obligatory>
+        <description>Дата начала работы</description>
+        <width>60</width>
+      </field>
+      <field name="BGELEB">
+        <type>A</type>
+        <size>1</size>
+        <obligatory>0</obligatory>
+        <description>Признак обслуживания клиента (Y/N)</description>
+        <width>60</width>
+      </field>
+      <field name="BGKVD1">
+        <type>A</type>
+        <size>2</size>
+        <obligatory>0</obligatory>
+        <description>Код вида ДУЛ</description>
+        <width>60</width>
+      </field>
+      <field name="BGSNO1">
+        <type>A</type>
+        <size>35</size>
+        <obligatory>0</obligatory>
+        <description>Серия и номер ДУЛ</description>
+        <width>60</width>
+      </field>
+      <field name="BGORG1">
+        <type>A</type>
+        <size>35</size>
+        <obligatory>0</obligatory>
+        <description>Организация, выдавшая ДУЛ</description>
+        <width>60</width>
+      </field>
+      <field name="BGDTV1">
+        <type>D</type>
+        <size>8</size>
+        <obligatory>0</obligatory>
+        <description>Дата выдачи ДУЛ</description>
+        <width>60</width>
+      </field>
+      <field name="BGDTO1">
+        <type>D</type>
+        <size>8</size>
+        <obligatory>0</obligatory>
+        <description>Срок действия ДУЛ</description>
+        <width>60</width>
+      </field>
+      <field name="BGKVD2">
+        <type>A</type>
+        <size>2</size>
+        <obligatory>0</obligatory>
+        <description>Код вида ДУЛ 2</description>
+        <width>60</width>
+      </field>
+      <field name="BGSNO2">
+        <type>A</type>
+        <size>35</size>
+        <obligatory>0</obligatory>
+        <description>Серия и номер ДУЛ 2</description>
+        <width>60</width>
+      </field>
+      <field name="BGORG2">
+        <type>A</type>
+        <size>35</size>
+        <obligatory>0</obligatory>
+        <description>Организация, выдавшая ДУЛ 2</description>
+        <width>60</width>
+      </field>
+      <field name="BGDTV2">
+        <type>D</type>
+        <size>8</size>
+        <obligatory>0</obligatory>
+        <description>Дата выдачи ДУЛ 2</description>
+        <width>60</width>
+      </field>
+      <field name="BGDTO2">
+        <type>D</type>
+        <size>8</size>
+        <obligatory>0</obligatory>
+        <description>Срок действия ДУЛ 2</description>
+        <width>60</width>
+      </field>
+    </output>
+  </api>
+  <api name="YS01DER" type="list" description="Запрос на существование счетов">
+    <input>
+      <field name="HSMSK">
+        <type>A</type>
+        <size>20</size>
+        <obligatory>1</obligatory>
+        <description>Маска счета для поиска</description>
+      </field>
+      <field name="IFCID">
+        <type>A</type>
+        <size>1</size>
+        <obligatory>0</obligatory>
+        <description>Код внешней системы (1-EsterDev, 2-Диасофт)</description>
+      </field>
+      <field name="INRES">
+        <type>A</type>
+        <size>29</size>
+        <obligatory>0</obligatory>
+        <description>Зарезервировано</description>
+      </field>
+    </input>
+    <output>
+      <field name="HZEAN">
+        <type>A</type>
+        <size>20</size>
+        <obligatory>0</obligatory>
+        <description>Номер счета</description>
+        <width>60</width>
+      </field>
+      <field name="HZACT">
+        <type>A</type>
+        <size>2</size>
+        <obligatory>0</obligatory>
+        <description>Тип счета</description>
+        <width>60</width>
+      </field>
+      <field name="HZCCY">
+        <type>A</type>
+        <size>3</size>
+        <obligatory>0</obligatory>
+        <description>Валюта счета</description>
+        <width>60</width>
+      </field>
+      <field name="HZSHN">
+        <type>A</type>
+        <size>15</size>
+        <obligatory>0</obligatory>
+        <description>Краткое наименование</description>
+        <width>60</width>
+      </field>
+      <field name="HZCUS">
+        <type>A</type>
+        <size>6</size>
+        <obligatory>0</obligatory>
+        <description>Мнемоника клиента</description>
+        <width>60</width>
+      </field>
+      <field name="HZCLC">
+        <type>A</type>
+        <size>3</size>
+        <obligatory>0</obligatory>
+        <description>Код месторасположения клиента</description>
+        <width>60</width>
+      </field>
+      <field name="OUTRES">
+        <type>A</type>
+        <size>151</size>
+        <obligatory>0</obligatory>
+        <description>Зарезервировано</description>
+        <width>60</width>
+      </field>
+    </output>
+  </api>
+  <api name="YS02DER" type="list" description="Поиск клиентов">
+    <input>
+      <field name="HSVID">
+        <type>A</type>
+        <size>2</size>
+        <obligatory>1</obligatory>
+        <description>Вид клиента (AA – физ.лицо; BA – ПБОЮЛ; CA – юр.лицо)</description>
+      </field>
+      <field name="HSINN">
+        <type>A</type>
+        <size>12</size>
+        <obligatory>0</obligatory>
+        <description>ИНН клиента</description>
+      </field>
+      <field name="HSKPP">
+        <type>A</type>
+        <size>9</size>
+        <obligatory>0</obligatory>
+        <description>КПП клиента</description>
+      </field>
+      <field name="HSKVD">
+        <type>A</type>
+        <size>2</size>
+        <obligatory>0</obligatory>
+        <description>Код ДУЛ</description>
+      </field>
+      <field name="HSSNO">
+        <type>A</type>
+        <size>35</size>
+        <obligatory>0</obligatory>
+        <description>Серия и номер ДУЛ</description>
+      </field>
+      <field name="HSORG">
+        <type>A</type>
+        <size>1</size>
+        <obligatory>0</obligatory>
+        <description>Организация, выдавшая ДУЛ</description>
+      </field>
+      <field name="HSDTV">
+        <type>D</type>
+        <size>8</size>
+        <obligatory>0</obligatory>
+        <description>Дата выдачи ДУЛ</description>
+      </field>
+      <field name="HSDTO">
+        <type>D</type>
+        <size>8</size>
+        <obligatory>0</obligatory>
+        <description>Дата срока действия ДУЛ</description>
+      </field>
+      <field name="IFCID">
+        <type>A</type>
+        <size>1</size>
+        <obligatory>0</obligatory>
+        <description>Код внешней системы (1-EsterDev, 2-Диасофт)</description>
+      </field>
+      <field name="INRES">
+        <type>A</type>
+        <size>88</size>
+        <obligatory>0</obligatory>
+        <description>Зарезервировано</description>
+      </field>
+    </input>
+    <output>
+      <field name="HZCUS">
+        <type>A</type>
+        <size>6</size>
+        <obligatory>0</obligatory>
+        <description>Мнемоника клиента</description>
+        <width>60</width>
+      </field>
+      <field name="HZCLC">
+        <type>A</type>
+        <size>3</size>
+        <obligatory>0</obligatory>
+        <description>Месторасположение клиента</description>
+        <width>60</width>
+      </field>
+      <field name="HZNM1">
+        <type>A</type>
+        <size>35</size>
+        <obligatory>0</obligatory>
+        <description>Фамилия/полное наименование</description>
+        <width>60</width>
+      </field>
+      <field name="HZNM2">
+        <type>A</type>
+        <size>35</size>
+        <obligatory>0</obligatory>
+        <description>Имя</description>
+        <width>60</width>
+      </field>
+      <field name="HZNM3">
+        <type>A</type>
+        <size>35</size>
+        <obligatory>0</obligatory>
+        <description>Отчество</description>
+        <width>60</width>
+      </field>
+      <field name="HZSNO1">
+        <type>A</type>
+        <size>35</size>
+        <obligatory>0</obligatory>
+        <description>Серия и номер ДУЛ</description>
+        <width>60</width>
+      </field>
+      <field name="HZORG1">
+        <type>A</type>
+        <size>35</size>
+        <obligatory>0</obligatory>
+        <description>Организация, выдавшая ДУЛ</description>
+        <width>60</width>
+      </field>
+      <field name="HZDTV1">
+        <type>D</type>
+        <size>8</size>
+        <obligatory>0</obligatory>
+        <description>Дата выдачи ДУЛ</description>
+        <width>60</width>
+      </field>
+      <field name="HZDTO1">
+        <type>D</type>
+        <size>8</size>
+        <obligatory>0</obligatory>
+        <description>Дата срока действия ДУЛ</description>
+        <width>60</width>
+      </field>
+      <field name="HZCUN">
+        <type>A</type>
+        <size>35</size>
+        <obligatory>0</obligatory>
+        <description>Полное наименование клиента</description>
+        <width>60</width>
+      </field>
+      <field name="HZDAS">
+        <type>A</type>
+        <size>15</size>
+        <obligatory>0</obligatory>
+        <description>Краткое наименование для счетов</description>
+        <width>60</width>
+      </field>
+      <field name="">
+        <type>A</type>
+        <size></size>
+        <obligatory>0</obligatory>
+        <description></description>
+        <width>60</width>
+      </field>
+      <field name="HZCTP">
+        <type>A</type>
+        <size>2</size>
+        <obligatory>0</obligatory>
+        <description>Тип клиента</description>
+        <width>60</width>
+      </field>
+      <field name="HZCPNC">
+        <type>A</type>
+        <size>6</size>
+        <obligatory>0</obligatory>
+        <description>Базовый номер клиента</description>
+        <width>60</width>
+      </field>
+      <field name="HZBRNM">
+        <type>A</type>
+        <size>4</size>
+        <obligatory>0</obligatory>
+        <description>Мнемоника филиала</description>
+        <width>60</width>
+      </field>
+      <field name="HZCRF">
+        <type>A</type>
+        <size>12</size>
+        <obligatory>0</obligatory>
+        <description>ИНН клиента</description>
+        <width>60</width>
+      </field>
+      <field name="HZCNAP">
+        <type>A</type>
+        <size>2</size>
+        <obligatory>0</obligatory>
+        <description>Страна происхождения</description>
+        <width>60</width>
+      </field>
+      <field name="HZCNAL">
+        <type>A</type>
+        <size>2</size>
+        <obligatory>0</obligatory>
+        <description>Страна резидентства</description>
+        <width>60</width>
+      </field>
+      <field name="HZNA1">
+        <type>A</type>
+        <size>35</size>
+        <obligatory>0</obligatory>
+        <description>Адрес – 1</description>
+        <width>60</width>
+      </field>
+      <field name="HZNA2">
+        <type>A</type>
+        <size>35</size>
+        <obligatory>0</obligatory>
+        <description>Адрес - 2</description>
+        <width>60</width>
+      </field>
+      <field name="HZNA3">
+        <type>A</type>
+        <size>35</size>
+        <obligatory>0</obligatory>
+        <description>Адрес – 3</description>
+        <width>60</width>
+      </field>
+      <field name="HZNA4">
+        <type>A</type>
+        <size>35</size>
+        <obligatory>0</obligatory>
+        <description>Адрес – 4</description>
+        <width>60</width>
+      </field>
+      <field name="OUTRES">
+        <type>A</type>
+        <size>580</size>
+        <obligatory>0</obligatory>
+        <description>Зарезервировано</description>
+        <width>60</width>
+      </field>
+    </output>
+  </api>
+  <api name="YH69EER" type="query" description="Запрос наличия счета">
+    <input>
+      <field name="HZEAN">
+        <type>A</type>
+        <size>20</size>
+        <obligatory>1</obligatory>
+        <description>Номер лицевого счета</description>
+      </field>
+      <field name="IFCID">
+        <type>A</type>
+        <size>1</size>
+        <obligatory>0</obligatory>
+        <description>Код внешней системы (1-EsterDev, 2-Диасофт)</description>
+      </field>
+      <field name="INRES">
+        <type>A</type>
+        <size>11</size>
+        <obligatory>0</obligatory>
+        <description>Зарезервировано</description>
+      </field>
+    </input>
+    <output>
+      <field name="HZACT">
+        <type>A</type>
+        <size>2</size>
+        <obligatory>0</obligatory>
+        <description>Тип клиента</description>
+        <width>60</width>
+      </field>
+      <field name="HZCTP">
+        <type>A</type>
+        <size>2</size>
+        <obligatory>0</obligatory>
+        <description>Тип счета</description>
+        <width>60</width>
+      </field>
+      <field name="HZCUS">
+        <type>A</type>
+        <size>6</size>
+        <obligatory>0</obligatory>
+        <description>Мнемоника клиента</description>
+        <width>60</width>
+      </field>
+      <field name="HZCLC">
+        <type>A</type>
+        <size>3</size>
+        <obligatory>0</obligatory>
+        <description>Месторасположение клиента</description>
+        <width>60</width>
+      </field>
+      <field name="HZCCY">
+        <type>A</type>
+        <size>3</size>
+        <obligatory>0</obligatory>
+        <description>Валюта счета</description>
+        <width>60</width>
+      </field>
+      <field name="HZAI17">
+        <type>B</type>
+        <size>1</size>
+        <obligatory>0</obligatory>
+        <description>Счет заблокирован?</description>
+        <width>60</width>
+      </field>
+      <field name="HZAI30">
+        <type>B</type>
+        <size>1</size>
+        <obligatory>0</obligatory>
+        <description>Счет закрыт?</description>
+        <width>60</width>
+      </field>
+      <field name="HZOAD">
+        <type>D</type>
+        <size>8</size>
+        <obligatory>0</obligatory>
+        <description>Дата открытия счета</description>
+        <width>60</width>
+      </field>
+      <field name="HZCAD">
+        <type>D</type>
+        <size>8</size>
+        <obligatory>0</obligatory>
+        <description>Дата закрытия счета</description>
+        <width>60</width>
+      </field>
+      <field name="SCAI11">
+        <type>B</type>
+        <size>1</size>
+        <obligatory>0</obligatory>
+        <description>Запрещено зачисление?</description>
+        <width>60</width>
+      </field>
+      <field name="SCAI12">
+        <type>B</type>
+        <size>1</size>
+        <obligatory>0</obligatory>
+        <description>Запрещено списание?</description>
+        <width>60</width>
+      </field>
+      <field name="OUTRES">
+        <type>A</type>
+        <size>464</size>
+        <obligatory>0</obligatory>
+        <description>Зарезервировано</description>
+        <width>60</width>
+      </field>
+    </output>
+  </api>
+</EQGate>

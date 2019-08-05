@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<!--  
+  Developer: Husnutdionov Nazir K. aka Wild Pointer © 2008
+  Created: 11.12.2008 Version 0.1 (xml structure version)
+  Modify: 22.12.2008 Version 0.2
+    1. Add WorkPath
+    2. Add 
+  
+-->
+<Config Version="0.2" LastModify="22.12.2008">
+  <WorkPath>D:/EqGate_Work/</WorkPath>
+  <Accounts Ext=".acc">
+    <Account Name="osv" Enabled="true" Type="File" ResultFile="osv" Description="Оборотно сальдова ведомость"></Account>
+    <Account Name="test" Enabled="true" Type="File" ResultFile="Remains" Description="Тестирование"></Account>
+  </Accounts>
+  <Hosts>
+    <Host>EQ</Host>
+    <Host>192.168.9.179</Host>
+    <Host>192.168.9.35</Host>
+  </Hosts>
+  <Ports>
+    <Port>8111</Port>
+    <Port>8555</Port>
+  </Ports>
+  <Blocs>
+    <Bloc>ABO</Bloc>
+    <Bloc>AB2</Bloc>
+  </Blocs>
+  <Users>
+    <User>NI01</User>
+    <User>DB06</User>
+  </Users>
+</Config>
