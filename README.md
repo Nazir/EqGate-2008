@@ -16,11 +16,11 @@ Screenshots
 -----------
 Вкладка «Счёт»:
 
-![Вкладка «Счёт»](https://github.com/Nazir/EqGate-2008/blob/master/Screenshots/EqGate_MainForm_tabPage_Account.png)
+![Вкладка «Счёт»](./Screenshots/EqGate_MainForm_tabPage_Account.png)
 
 Вкладка «Соединение»:
 
-![Вкладка «Соединение»](https://github.com/Nazir/EqGate-2008/blob/master/Screenshots/EqGate_MainForm_tabPage_Connection_Session.png)
+![Вкладка «Соединение»](./Screenshots/EqGate_MainForm_tabPage_Connection_Session.png)
 
 Repo owner
 ----------
